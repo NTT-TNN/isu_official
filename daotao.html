@@ -63,17 +63,21 @@
 <body>
 
     <!-- Navigation -->
-     <nav class="nav navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="nav navbar navbar-inverse navbar-fixed-top" role="navigation">
        <div class="container">
            <!-- Brand and toggle get grouped for better mobile display -->
            
            <div class="navbar-header">
                
                
-               <a class="navbar-brand" href="#" >
-                   <span id="brand">
-                       <img id="logo" src="./img/logo.png"></img>
-                       <img id="logotransparent" src="./img/logotransparent.png"></img> ISU EDUCATION</span>
+               <a class="navbar-brand">
+                   <div id="brand">
+                       <span id="logo-img">
+                           <img id="logo" class="hidden" id="logo" src="./img/logo.png"></img>
+                           <img id="logotransparent" src="./img/logotransparent.png"></img>
+                       </span>
+                       <span>ISU EDUCATION</span>
+                    </div>
                 </a>
                
            </div>
@@ -81,13 +85,13 @@
 
            <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
                <ul class="nav navbar-nav navbar-right">
-                   <li>
+                   <li >
                        <a href="index.html" style="color:white;">TRANG CHỦ</a>
                    </li>
                    <li>
                        <a href="introduce.html" style="color:white;">GIỚI THIỆU</a>
                    </li>
-                   <li class="dropdown active" >
+                   <li class="active dropdown" >
                      <a class="dropdown-toggle"  href="daotao.html" style="color:white;">ĐÀO TẠO
                      <span class="caret"></span></a>
                      <ul class="dropdown-menu" >
@@ -202,7 +206,7 @@
             <div>
                 <figure><img style="width:45%" src="./img/img_daotao/lapnghiep.png"></img></figure>
             </div>
-         </div
+         </div>
         
     </div>
     
@@ -215,7 +219,7 @@
             <div>
                 <figure><img style="width:40%" src="./img/img_daotao/nghe.png"></img></figure>
             </div>
-         </div
+         </div>
         </div>
     </div>
     
@@ -229,34 +233,45 @@
             <div>
                 <figure><img style="width:50%" src="./img/img_daotao/tienganh.png"></img></figure>
             </div>
-         </div
+         </div>
         </div>
     </div>
     <div id="footer">
        <div class="container-fluid">
            <div class="row">
-               <div class="col-md-6" >
-                   &nbsp; &nbsp;CÔNG TY CỔ PHẦN GIÁO DỤC ISU
+                <div class="col-md-6" >
+                   &nbsp; CÔNG TY CỔ PHẦN GIÁO DỤC ISU
                    <hr>
-                   <span class="copyright">Copyright &copy ISU EDUCATION by TTH</span>
-               </div>
+                   <span class="copyright">&nbsp;Trụ sở chính: Tòa nhà ISU<br>&nbsp;Phòng 604, số 1, ngõ 120, Trường Chinh, Phương Mai, Đống Đa, Hà Nội</span>
+                </div>
+                <div class="col-md-6" >
+                    &nbsp;&nbsp;&nbsp;LIÊN HỆ
+                    <hr>
+                    <span class="copyright">
+                    &nbsp;&nbsp;&nbsp;HOTLINE: 0462.918.798 - 0944.307.316 (Mr. Khánh)
+                    <br>
+                    &nbsp;&nbsp;&nbsp;Email: isueducation@gmail.com
+                    </span>
+                </div>
            </div>
        </div>
     </div>
     <!-- Bootstrap Core JavaScript -->
     <script>
       
-         var scroll_start = 0;
+        var scroll_start = 0;
+        var startchange = $('#startchange');
+        var offset = startchange.offset();
         if (startchange.length){
            $(document).scroll(function() { 
               scroll_start = $(this).scrollTop();
               if(scroll_start > offset.top) {
-                  $(".navbar, .navbar-nav, .dropdown-toggle, .dropdown-menu").css('background-color', '#304B30');
+                  $(".navbar, .navbar-nav, .dropdown-menu").css('background-color', '#304B30');
                   $("#brand").css('color', '#267E2E');
                   $("#logo").removeClass("hidden");
                   $("#logotransparent").addClass("hidden");
                } else {
-                  $('.navbar, .navbar-nav, .dropdown-toggle, .dropdown-menu').css('background-color', '#247E2C');
+                  $('.navbar, .navbar-nav, .dropdown-menu').css('background-color', '#247E2C');
                   $("#brand").css('color', 'white');
                   $("#logo").addClass("hidden");
                   $("#logotransparent").removeClass("hidden");

@@ -111,8 +111,11 @@
     /*    height:1000px;*/
     /*}*/
     .thongtin{
-        margin-top:0px;
+        margin-top:15px;
         height:10px;
+        font-size:15px;
+        font-family: SVN-GothamBold;
+        color: #247E2C;
     }
     #imggioithieu{
         height:92%;
@@ -152,12 +155,12 @@
         margin:0px 0px 30px 0px ;
     }
     .contact{
-        padding:20px 40px 40px 60px;
+        padding-top:20px;
         font-size:20px;
     }
     .ndlh1{
         margin-left:70px;
-        margin-top:55px;
+        margin-top:-15px;
         margin-bottom:0px;
         font-size: 20px;
         
@@ -180,10 +183,14 @@
            <div class="navbar-header">
                
                
-               <a class="navbar-brand" href="#" >
-                   <span id="brand">
-                       <img id="logo" src="./img/logo.png"></img>
-                       <img id="logotransparent" src="./img/logotransparent.png"></img> ISU EDUCATION</span>
+               <a class="navbar-brand"  >
+                   <div id="brand">
+                       <span id="logo-img">
+                           <img id="logo" class="hidden" id="logo" src="./img/logo.png"></img>
+                           <img id="logotransparent" src="./img/logotransparent.png"></img>
+                       </span>
+                       <span>ISU EDUCATION</span>
+                    </div>
                 </a>
                
            </div>
@@ -206,19 +213,13 @@
                      </ul>
                    </li>
                    <li><a href="#" style="color:white;">TIN TỨC & SỰ KIỆN</a></li>
-                   <li><a href="contact.html" style="color:white;">LIÊN HỆ</a></li>
+                   <li  class="active" ><a href="contact.html" style="color:white;">LIÊN HỆ</a></li>
                </ul>
            </div>
            <!-- /.navbar-collapse -->
        </div>
-       <!-- /.container -->
    </nav>
 
-    <!-- Image Background Page Header -->
-    
-
-    <!-- Note: The background image is set within the business-casual.css file. -->
-    <!--<header class="business-header">-->
         <div id="startchange">
             <img alt="" src="./img/cover.png" ></img>          
         </div>
@@ -263,7 +264,7 @@
                <div class="col-md-8 textgreen contact">
                    Hotline: 0462.918.798<br>
                    Tell:    0944.307.316<br>
-                   Email:   vevw
+                   Email: isueducation@gmail.com
                    <br>
                </div>
                <div class="col-md-4">
@@ -279,9 +280,9 @@
         <div class="col-md-5" style="text-align:center;margin-top:50px;">
           <h3 style="color:#247E2C;">ISU EDUCATION</h3>
             <ul>
-              <li class="row"><h5 class="thongtin">Website:</h5><h5 class="thongtin" style="color:#247E2C;">isu.edu.vn</h5></li>
-              <li class="row"> <h5 class="thongtin">Email:</h5><h5 class="thongtin" style="color:#247E2C;">abc@gmail.com</h5></li>
-              <li class="row"><h5 class="thongtin">Địa chỉ:</h5><h5 class="thongtin" style="color:#247E2C;">Phòng 605 S1 Ngõ 120 Trường Chinh,<br>P.Kim Liên,Q.Đống Đa,TP.Hà Nội</h5></li>
+              <li class="row"><div class="thongtin">Website: isu.edu.vn</div></li>
+              <li class="row"> <div class="thongtin">Email: isueducation@gmail.com</div></li>
+              <li class="row"><div class="thongtin">Địa chỉ: Phòng 604 S1 Ngõ 120 Trường Chinh,<br>P.Kim Liên, Q.Đống Đa, TP.Hà Nội</div></li>
             </ul>
         </div>
         <div class="col-md-7" id="map" style="text-align:left;margin-top:50px;height:500px;">
@@ -291,14 +292,23 @@
 
 
 
-        <div id="footer">
+    <div id="footer">
        <div class="container-fluid">
            <div class="row">
-               <div class="col-md-6" >
-                   &nbsp; &nbsp;CÔNG TY CỔ PHẦN GIÁO DỤC ISU
+                <div class="col-md-6" >
+                   &nbsp; CÔNG TY CỔ PHẦN GIÁO DỤC ISU
                    <hr>
-                   <span class="copyright">Copyright &copy ISU EDUCATION by TTH</span>
-               </div>
+                   <span class="copyright">&nbsp;Trụ sở chính: Tòa nhà ISU<br>&nbsp;Phòng 604, số 1, ngõ 120, Trường Chinh, Phương Mai, Đống Đa, Hà Nội</span>
+                </div>
+                <div class="col-md-6" >
+                    &nbsp;&nbsp;&nbsp;LIÊN HỆ
+                    <hr>
+                    <span class="copyright">
+                    &nbsp;&nbsp;&nbsp;HOTLINE: 0462.918.798 - 0944.307.316 (Mr. Khánh)
+                    <br>
+                    &nbsp;&nbsp;&nbsp;Email: isueducation@gmail.com
+                    </span>
+                </div>
            </div>
        </div>
     </div>
@@ -319,7 +329,7 @@
     <script src="data1/assets/vendors/highlight.js"></script>
     <script src="data1/assets/js/app.js"></script>
     <script>
-                  var scroll_start = 0;
+        var scroll_start = 0;
         var startchange = $('#startchange');
         var offset = startchange.offset();
         if (startchange.length){
@@ -328,13 +338,13 @@
               if(scroll_start > offset.top) {
                   $(".navbar, .navbar-nav, .dropdown-toggle, .dropdown-menu").css('background-color', '#304B30');
                   $("#brand").css('color', '#267E2E');
-                  $("#logo").show();
-                  $("#logotransparent").hide();
+                  $("#logo").removeClass("hidden");
+                  $("#logotransparent").addClass("hidden");
                } else {
                   $('.navbar, .navbar-nav, .dropdown-toggle, .dropdown-menu').css('background-color', '#247E2C');
                   $("#brand").css('color', 'white');
-                  $("#logo").hide();
-                  $("#logotransparent").show();
+                  $("#logo").addClass("hidden");
+                  $("#logotransparent").removeClass("hidden");
                }
            });
         }

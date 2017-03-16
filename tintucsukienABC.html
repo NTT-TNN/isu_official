@@ -101,10 +101,14 @@
            <div class="navbar-header">
                
                
-               <a class="navbar-brand" href="#" >
-                   <span id="brand">
-                       <img id="logo" src="./img/logo.png"></img>
-                       <img id="logotransparent" src="./img/logotransparent.png"></img> ISU EDUCATION</span>
+               <a class="navbar-brand"  >
+                   <div id="brand">
+                       <span id="logo-img">
+                           <img id="logo" class="hidden" id="logo" src="./img/logo.png"></img>
+                           <img id="logotransparent" src="./img/logotransparent.png"></img>
+                       </span>
+                       <span>ISU EDUCATION</span>
+                    </div>
                 </a>
                
            </div>
@@ -126,12 +130,13 @@
                        <li><a href="#" >ĐÀO TẠO THEO YÊU CẦU</a></li>
                      </ul>
                    </li>
-                   <li><a href="#" style="color:white;">TIN TỨC & SỰ KIỆN</a></li>
+                   <li class="active"><a href="#" style="color:white;">TIN TỨC & SỰ KIỆN</a></li>
                    <li><a href="contact.html" style="color:white;">LIÊN HỆ</a></li>
                </ul>
            </div>
+           <!-- /.navbar-collapse -->
        </div>
-
+       <!-- /.container -->
    </nav>
         <div id="startchange">
             <img alt="" src="./img/cover.png" ></img>          
@@ -292,11 +297,20 @@
     <div id="footer">
        <div class="container-fluid">
            <div class="row">
-               <div class="col-md-6" >
-                   &nbsp; &nbsp;CÔNG TY CỔ PHẦN GIÁO DỤC ISU
+                <div class="col-md-6" >
+                   &nbsp; CÔNG TY CỔ PHẦN GIÁO DỤC ISU
                    <hr>
-                   <span class="copyright">Copyright &copy ISU EDUCATION by TTH</span>
-               </div>
+                   <span class="copyright">&nbsp;Trụ sở chính: Tòa nhà ISU<br>&nbsp;Phòng 604, số 1, ngõ 120, Trường Chinh, Phương Mai, Đống Đa, Hà Nội</span>
+                </div>
+                <div class="col-md-6" >
+                    &nbsp;&nbsp;&nbsp;LIÊN HỆ
+                    <hr>
+                    <span class="copyright">
+                    &nbsp;&nbsp;&nbsp;HOTLINE: 0462.918.798 - 0944.307.316 (Mr. Khánh)
+                    <br>
+                    &nbsp;&nbsp;&nbsp;Email: isueducation@gmail.com
+                    </span>
+                </div>
            </div>
        </div>
     </div>
@@ -307,7 +321,7 @@
     <script src="data1/assets/vendors/highlight.js"></script>
     <script src="data1/assets/js/app.js"></script>
     <script>
-                  var scroll_start = 0;
+        var scroll_start = 0;
         var startchange = $('#startchange');
         var offset = startchange.offset();
         if (startchange.length){
@@ -316,13 +330,13 @@
               if(scroll_start > offset.top) {
                   $(".navbar, .navbar-nav, .dropdown-toggle, .dropdown-menu").css('background-color', '#304B30');
                   $("#brand").css('color', '#267E2E');
-                  $("#logo").show();
-                  $("#logotransparent").hide();
+                  $("#logo").removeClass("hidden");
+                  $("#logotransparent").addClass("hidden");
                } else {
                   $('.navbar, .navbar-nav, .dropdown-toggle, .dropdown-menu').css('background-color', '#247E2C');
                   $("#brand").css('color', 'white');
-                  $("#logo").hide();
-                  $("#logotransparent").show();
+                  $("#logo").addClass("hidden");
+                  $("#logotransparent").removeClass("hidden");
                }
            });
         }
